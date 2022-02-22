@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Barra de navegación</title>
+	<style type="text/css">
+		#logo{
+			height: 60px;
+			margin: 20px;
+			margin-left: 50px;
+			display: inline-block;
+		}
+		header{
+			background-color: #284A42;
+			height: 100px;
+			width: 100%;
+			margin: 0px;
+			display: flex;
+    		align-items: center;
+    		justify-content: space-between;
+		}
+		body{
+			background-color: #F8F9E4;
+			margin: auto;
+		}
+		h2{
+			display: inline-block;
+			margin-left: 40px;
+		}
+		#busqueda{
+			display: inline-block;
+			border: 1px solid #E1E5EE;
+			border-radius: 25px;
+			background-color: #F8F9E4;
+			width: 500px;
+			margin-left: 100px;
+			display: flex;
+    		align-items: center;
+			
+		}
+		#icono1{
+			height: 20px;
+			margin-left: 20px;
+			margin-right: 40px;
+		}
+		#texto_buscar{
+			color: #718da1;
+			margin-right: 20px;
+			display: inline-block;
+		}
+		#texto_header{
+			display: inline-block;
+			color: #F8F9E4;
+
+		}
+		#icono2{
+			width: 50px;
+			display: inline-block;
+			margin-left: 70px;
+			margin-right: 70px;
+
+
+		}
+		#panel{
+			display: none;
+			background-color: #FFBC8F;
+			width: 500px;
+			height: 1500px;
+			transition: 1s;
+		}
+		#panel.seleccionado{
+			display: none;
+			background-color: #FFBC8F;
+			width: 500px;
+			height: 1500px;
+			transition: 1s;
+		}
+		
+	</style>
+</head>
+<body>
+	<header>
+		
+		<img id="logo" src="fotos/logo_oi.png">
+			
+		<div id="busqueda">
+				<img id="icono1" src="fotos/lupa.png">
+				<p id="texto_buscar">¿Qué estas buscando?</p>
+		</div>
+		
+		<div>
+			<div id="texto_header">
+				<h2>Inicio</h2>
+				<h2>Descubrir</h2>
+			</div>
+			
+			<img id="icono2" src="fotos/hamburguesa.png">
+		<!-- lo estoy haciendo sobre la imagen y la estoy deformando, me tiene que servirsolo para clickar y luego desaparecer-->
+		<div>
+		<div id="panel">
+			<h2>x</h2>
+		</div>
+		<script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script type="text/javascript">
+			$('#icono2').click(function(){
+				$(this).show('#panel.seleccionado')
+			});
+			$('#icono2').click(function(){
+				$('#texto_header').hide()
+			});
+			$('#icono2').click(function(){
+				$('#icono2').hide()
+			});
+	
+		
+	
+
+		</script>
+		
+	</header>
+	<article>
+		<p>Prueba</p>
+	</article>
+</body>
+</html>
